@@ -1,8 +1,8 @@
 import React from "react";
 import { useApp } from "../context/AppContext";
 
-export default function Predictions() {
-  const { predictions } = useApp();
+export default function Predictions({ predictions = [] }) {
+  const [predictions,setPredictions] = useState([]);
 
   return (
     <section className="surface">

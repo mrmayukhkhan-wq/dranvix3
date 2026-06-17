@@ -5,7 +5,7 @@ import { getInvoices, createInvoice, updateInvoiceParsed } from "../../services/
 import { getMedicines } from "../../services/medicine";
 import { getActivity } from "../../services/activity";
 
-export default function InvoicePanel({ setView }) {
+export default function InvoicePanel({ invoices = [] }) {
   const { dispatch } = useApp();
   const [uploading, setUploading]   = useState(false);
   const [invoices,  setInvoices]    = useState([]);

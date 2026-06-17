@@ -1,8 +1,8 @@
 import React from "react";
 import { useApp } from "../context/AppContext";
 
-export default function ActivityFeed() {
-  const { activity } = useApp();
+export default function ActivityFeed({ activity = [] }) {
+  const [ activity, setActivity ] = useState([]);
 
   return (
     <section className="surface">

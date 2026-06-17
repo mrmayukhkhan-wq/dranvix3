@@ -8,7 +8,7 @@ import { getActivity } from '../services/activity'
 
 const initialState = {
   // Auth
-  activeView: 'overview'//added this line
+  activeView: 'overview',//added this line
   user:         null,   // Supabase user object | null
   session:      null,   // Supabase session object | null
   authLoading:  true,   // true until onAuthStateChange fires once

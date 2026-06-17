@@ -3,8 +3,8 @@ import { getDaysRemaining } from "../utils/expiryCheck";
 
 const ZONE_LABELS = { red: "Return now", amber: "Watch", green: "Safe" };
 
-export default function MedicineList({ medicines }) {
-  if (!medicines.length) {
+export default function MedicineList({ medicines=[] }) {
+  if (!medicines || !medicines.length) {
     return <p style={{ padding: "16px", color: "var(--muted)", fontSize: "13px" }}>No medicines match your search.</p>;
   }
 

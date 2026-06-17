@@ -8,6 +8,7 @@ import { getActivity } from '../services/activity'
 
 const initialState = {
   // Auth
+  activeView: 'overview'//added this line
   user:         null,   // Supabase user object | null
   session:      null,   // Supabase session object | null
   authLoading:  true,   // true until onAuthStateChange fires once
@@ -70,6 +71,11 @@ function reducer(state, action) {
       return { ...state, activity: [action.payload, ...state.activity] }
     case 'SETTINGS_UPDATED':
       return { ...state, settings: action.payload }
+    case 'SET_VIEW':
+      return { ...state, activeView: action.payload }
+    case 'LOGOUT':
+      supabase.auth.signOut()
+      return { ...initialState, authLoading: false }
 
     default:
       return state

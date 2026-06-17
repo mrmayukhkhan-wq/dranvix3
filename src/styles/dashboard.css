@@ -1,0 +1,86 @@
+.dashboard { width: 100%; min-height: 100vh; display: grid; grid-template-columns: 260px 1fr; background: var(--bg); }
+.rail { position: sticky; top: 0; height: 100vh; border-right: 1px solid var(--line); background: rgba(17, 22, 18, .96); padding: 18px; display: flex; flex-direction: column; gap: 18px; }
+.rail .brand-mark { font-size: 18px; }
+.nav { display: grid; gap: 6px; margin-top: 12px; }
+.nav button { height: 42px; border: 1px solid transparent; border-radius: var(--radius); background: transparent; color: var(--muted); display: grid; grid-template-columns: 28px 1fr auto; align-items: center; text-align: left; padding: 0 10px; font-weight: 760; }
+.nav button.active { color: var(--text); border-color: var(--line); background: rgba(255,255,255,.035); }
+.nav-kbd { font-family: var(--font-mono); color: var(--faint); font-size: 11px; }
+.rail-bottom { margin-top: auto; border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; background: rgba(255,255,255,.025); }
+.rail-bottom strong { display: block; font-size: 13px; }
+.rail-bottom span { display: block; color: var(--muted); margin-top: 6px; font-size: 12px; line-height: 1.45; }
+.main { min-width: 0; padding: 18px; }
+.mobile-top { display: none; position: sticky; top: 0; z-index: 20; background: rgba(12, 15, 13, .94); border-bottom: 1px solid var(--line); padding: 12px; backdrop-filter: blur(12px); }
+.topbar { max-width: var(--max); margin: 0 auto 18px; display: grid; grid-template-columns: minmax(240px, 1fr) auto auto; gap: 12px; align-items: center; }
+.search { height: var(--control-h); border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: flex; align-items: center; gap: 10px; padding: 0 14px; color: var(--muted); min-width: 0; }
+.search input { min-width: 0; width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); }
+.view { max-width: var(--max); margin: 0 auto; display: grid; gap: 18px; }
+.hero-strip { border: 1px solid var(--line); background: linear-gradient(110deg, rgba(34, 197, 94, .13), transparent 42%), var(--panel); border-radius: var(--radius); padding: clamp(18px, 4vw, 30px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; }
+.hero-strip h2 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 44px); line-height: 1.05; }
+.hero-strip p { margin: 0; color: var(--muted); line-height: 1.6; max-width: 680px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.metric { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: 16px; min-height: 116px; display: grid; align-content: space-between; }
+.metric span { color: var(--muted); font-size: 13px; }
+.metric strong { font-size: 30px; font-family: var(--font-mono); letter-spacing: 0; }
+.metric small { color: var(--faint); }
+.metric.danger { border-color: rgba(239, 68, 68, .45); background: linear-gradient(180deg, var(--danger-bg), var(--panel)); }
+.metric.warn { border-color: rgba(245, 158, 11, .45); background: linear-gradient(180deg, var(--warn-bg), var(--panel)); }
+.metric.safe { border-color: rgba(34, 197, 94, .45); background: linear-gradient(180deg, var(--safe-bg), var(--panel)); }
+.grid-2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: start; }
+.surface { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); overflow: hidden; }
+.surface-head { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.surface-head h3 { margin: 0; font-size: 16px; }
+.surface-head span { color: var(--muted); font-size: 12px; font-family: var(--font-mono); }
+.medicine-list { display: grid; }
+.medicine-row { display: grid; grid-template-columns: 9px minmax(160px, 1.2fr) .7fr .7fr auto; gap: 12px; align-items: center; padding: 13px 16px; border-bottom: 1px solid var(--line-soft); }
+.medicine-row:last-child { border-bottom: 0; }
+.status-bar { align-self: stretch; border-radius: 999px; }
+.red .status-bar, .tag.red { background: var(--danger); }
+.amber .status-bar, .tag.amber { background: var(--warn); }
+.green .status-bar, .tag.green { background: var(--safe); }
+.med-name strong { display: block; margin-bottom: 4px; }
+.med-name span, .cell-label { color: var(--muted); font-size: 12px; }
+.tag { display: inline-flex; align-items: center; min-height: 24px; border-radius: 999px; padding: 0 9px; color: #08110b; font-size: 12px; font-weight: 900; white-space: nowrap; }
+.right-stack { display: grid; gap: 18px; }
+.drop-zone { margin: 16px; min-height: 170px; border: 1px dashed #4a554e; border-radius: var(--radius); display: grid; place-items: center; text-align: center; padding: 18px; background: rgba(255,255,255,.018); }
+.drop-zone strong { display: block; font-size: 18px; margin-bottom: 6px; }
+.drop-zone span { color: var(--muted); line-height: 1.5; }
+.upload-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px 16px; }
+.prediction-list, .activity-list { display: grid; padding: 8px 0; }
+.prediction, .activity { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 11px 16px; border-bottom: 1px solid var(--line-soft); }
+.prediction:last-child, .activity:last-child { border-bottom: 0; }
+.prediction strong, .activity strong { display: block; margin-bottom: 3px; }
+.prediction span, .activity span { color: var(--muted); font-size: 12px; }
+.delta { font-family: var(--font-mono); color: var(--brand); font-weight: 900; }
+.customizer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 16px; }
+.swatch-control { border: 1px solid var(--line); background: var(--panel-2); border-radius: var(--radius); padding: 12px; display: grid; gap: 10px; }
+.swatch-control label { color: var(--muted); font-size: 12px; font-weight: 800; }
+.swatch-control input[type="color"] { width: 100%; height: 42px; padding: 0; border: 0; background: transparent; }
+.density { padding: 0 16px 16px; display: grid; gap: 10px; }
+.density input { width: 100%; accent-color: var(--brand); }
+.bottom-nav { display: none; position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 30; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: rgba(17, 22, 18, .96); box-shadow: var(--shadow); overflow: hidden; }
+.bottom-nav button { min-height: 52px; border: 0; background: transparent; color: var(--muted); font-size: 11px; font-weight: 800; }
+.bottom-nav button.active { color: var(--brand); background: rgba(34, 197, 94, .08); }
+
+/* ── Additions to match video UI exactly ─────────────────────────── */
+.dashboard { display: grid; grid-template-columns: 160px 1fr; min-height: 100vh; }
+.dashboard-body { display: flex; flex-direction: column; min-width: 0; }
+.topbar { padding: 12px 18px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(240px,1fr) auto auto; gap: 12px; align-items: center; background: rgba(12,15,13,.96); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); }
+.main { padding: 18px; flex: 1; }
+.view { max-width: var(--max); margin: 0 auto; display: grid; gap: 18px; }
+.hero-text h2 { margin: 0 0 8px; font-size: clamp(24px,3.5vw,38px); line-height: 1.05; }
+.hero-text p { margin: 0; color: var(--muted); line-height: 1.6; max-width: 640px; }
+.surface-search { padding: 12px 16px 0; }
+.search-sm { width: 100%; max-width: 320px; }
+/* Tighter rail to match video — 160px */
+.rail { width: 160px; }
+.rail .nav button { grid-template-columns: 22px 1fr auto; font-size: 13px; }
+
+/* ── Invoice panel additions ───────────────────────────────────────── */
+.drop-zone { cursor: pointer; transition: border-color .15s, background .15s; }
+.drop-zone:hover, .drag-active { border-color: var(--brand) !important; background: rgba(34,197,94,.06) !important; }
+.invoice-list { display: grid; border-top: 1px solid var(--line); }
+.invoice-row { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--line-soft); }
+.invoice-row:last-child { border-bottom: 0; }
+.invoice-row strong { display: block; margin-bottom: 3px; font-size: 14px; }
+.invoice-row span { color: var(--muted); font-size: 12px; }

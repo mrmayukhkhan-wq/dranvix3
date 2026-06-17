@@ -1,0 +1,28 @@
+:root {
+  --bg: #0c0f0d;
+  --bg-2: #111612;
+  --panel: #151a17;
+  --panel-2: #1b211d;
+  --line: #2a332d;
+  --line-soft: rgba(213, 229, 217, .09);
+  --text: #edf4ee;
+  --muted: #9aa69c;
+  --faint: #667269;
+  --brand: #22c55e;
+  --brand-2: #16a34a;
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, .14);
+  --warn: #f59e0b;
+  --warn-bg: rgba(245, 158, 11, .15);
+  --safe: #22c55e;
+  --safe-bg: rgba(34, 197, 94, .14);
+  --violet: #8b5cf6;
+  --blue: #38bdf8;
+  --font-ui: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --radius: 7px;
+  --radius-sm: 4px;
+  --shadow: 0 24px 80px rgba(0, 0, 0, .42);
+  --max: 1220px;
+  --control-h: 46px;
+}

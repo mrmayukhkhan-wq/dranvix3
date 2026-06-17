@@ -137,6 +137,8 @@ export function AppProvider({ children }) {
 
   const value = {
     ...state,
+    isAuthenticated: !!state.user,
+    loading: state.authLoading,
     dispatch,
     refreshMedicines,
     refreshActivity,

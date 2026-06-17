@@ -1,8 +1,8 @@
 # ─── Supabase ────────────────────────────────────────────────────────────────
 # Get these from: Supabase Dashboard → Project Settings → API
 
-VITE_SUPABASE_URL=https://yzuvmlucukkgoxhyjltf.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6dXZtbHVjdWtrZ294aHlqbHRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2Njk1MTEsImV4cCI6MjA5NzI0NTUxMX0.P_l4Zyav5-Xm1eUJxpFNYo_M4z_lmtjxEFiY0nZMQyk
+VITE_SUPABASE_URL=https://qgoebnunadvjeciimuhy.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnb2VibnVuYWR2amVjaWltdWh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2ODA4NzgsImV4cCI6MjA5NzI1Njg3OH0.Yv5EpCTk1TUktyMEIyHVf9ujzURp604sDtsHZakp6lA
 
 # ─── App ─────────────────────────────────────────────────────────────────────
 VITE_APP_NAME=MedControl

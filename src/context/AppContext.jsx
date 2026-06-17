@@ -44,9 +44,9 @@ function reducer(state, action) {
       return {
         ...state,
         dataLoading: false,
-        medicines:   action.payload.medicines ?? state.medicines,
-        activity:    action.payload.activity  ?? state.activity,
-        settings:    action.payload.settings  ?? state.settings,
+        medicines:   action.payload.medicines ?? [],
+        activity:    action.payload.activity  ?? [],
+        settings:    action.payload.settings  ?? DEFAULT_SETTINGS,
       }
     case 'DATA_ERROR':
       return { ...state, dataLoading: false, error: action.payload }
